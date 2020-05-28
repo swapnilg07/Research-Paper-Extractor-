@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>ANALYSER</title>
+  </head>
+  <body>
+    <div class="jumbotron text-center" style="padding-top:20px;padding-bottom:20px;margin-bottom:15px;">
+          <img src="{% static 'images/nit_logo.png' %}" style="float:left;margin-left:50px;"  width="110" height="110" alt="nitt"/>
+          <br>
+          <h2 style="margin-top:2px;font-size:45px;font-family:georgia,garamond,serif;color:red;">RESEARCH PAPERS TO JSON CONVERTER</h2>
+          <br>
+    </div>
+    <form action="/">
+        <button type="submit" style="float:right; margin-right:150px; margin-top:20px;" class="btn btn-danger">Home</button>
+    </form><br>
+
+    <div class="container">
+      <ul class="nav nav-pills">
+        <li class="active"><a data-toggle="pill" href="#home">Overview</a></li>
+        <li><a data-toggle="pill" href="#menu1">Abstract</a></li>
+        <li><a data-toggle="pill" href="#menu2">Introduction & Content</a></li>
+        <li><a data-toggle="pill" href="#menu3">Conclusion</a></li>
+        <li><a data-toggle="pill" href="#menu4">Reference</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <br><br><br>
+          <h3>Author's Name:</h3> {{Name|linebreaks}} <br><br>
+          <h3>E-mail ID:-</h3> {{mail|linebreaks}}
+          <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+          <br><br><br>
+        {{Abstract}}
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <br><br><br>
+          {{Introduction|linebreaks}}
+        </div>
+        <div id="menu3" class="tab-pane fade">
+          <br><br><br>
+          {{Conclusion}}
+          <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div id="menu4" class="tab-pane fade">
+          <br><br><br>
+          {{References|linebreaks}}
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron text-center" style="padding-top:5px;margin-bottom:5px;">
+
+    </div>
+  </body>
+</html>
