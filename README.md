@@ -1,4 +1,4 @@
-# Research-Paper-Extractor-
+# Research-Paper-Extractor
 
 Steps to use/run project
  1.  Download and install latest version of Python https://www.python.org/downloads/ and Django https://www.djangoproject.com/download/
