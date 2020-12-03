@@ -1,6 +1,6 @@
 # Research-Paper-Extractor-
 
-Steps to use project
+Steps to use/run project
  1.  Download and install latest version of Python https://www.python.org/downloads/ and Django https://www.djangoproject.com/download/
  2.  Open cmd and run this commands:
  3.		 pip install pdfminer
